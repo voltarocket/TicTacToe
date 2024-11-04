@@ -10,6 +10,7 @@ export function GameLayout() {
         isDraw,
         handleResetClick
     } = useGameState();
+
     return (
         <div className="flex flex-col items-center w-40 mx-auto my-24 border border-black p-5">
         <GameInfo
@@ -20,5 +21,10 @@ export function GameLayout() {
         <GameField/>
         <ResetButton onClick={handleResetClick}/>
       </div>
-    )
-}
+    );
+  }
+   // const StyledGameLayout = (props) => {
+     // const {children} = props;
+      //return  <div className="flex flex-col items-center w-40 mx-auto my-24 border border-black p-5">{children}</div>
+    
+//}
