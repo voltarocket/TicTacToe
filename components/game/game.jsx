@@ -1,19 +1,18 @@
-import { GameCell } from './game-cell'
-import { GameInfo } from './game-info'
-import { ResetButton } from './reset-button';
-import { useGameState } from './use-game-state'
+import { GameCell } from "./game-cell";
+import { GameInfo } from "./game-info";
+import { ResetButton } from "./reset-button";
+import { useGameState } from "./use-game-state";
 
 export function Game() {
-
-    const {
-        cells,
-        currentStep,
-        winnerSequence,
-        winnerSymbol,
-        isDraw,
-        handleCellClick,
-        handleResetClick
-    } = useGameState();
+  const {
+    cells,
+    currentStep,
+    winnerSequence,
+    winnerSymbol,
+    isDraw,
+    handleCellClick,
+    handleResetClick,
+  } = useGameState();
   return (
     <div className="flex flex-col items-center w-40 mx-auto my-24 border border-black p-5">
       <GameInfo
@@ -23,15 +22,15 @@ export function Game() {
       />
       <div className="grid pt-px pl-px grid-cols-[repeat(3,_30px)] grid-rows-[repeat(3,_30px)]">
         {cells.map((symbol, index) => (
-          <GameCell 
+          <GameCell
             key={index}
-            symbol={symbol} 
-            isWinner={winnerSequence?.includes(index)} 
-            onClick={() => handleCellClick(index)} 
+            symbol={symbol}
+            isWinner={winnerSequence?.includes(index)}
+            onClick={() => handleCellClick(index)}
           />
         ))}
       </div>
-      <ResetButton onClick={handleResetClick}/>
+      <ResetButton onClick={handleResetClick} />
     </div>
-  )
+  );
 }
