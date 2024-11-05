@@ -1,4 +1,3 @@
-import Image from "next/image";
 import clsx from "clsx";
 import { Profile } from "../profile";
 import { CrossIcon } from "./icons/cross-icon";
