@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Profile } from "../profile";
 import LogoSrc from "./logo.svg";
-import { ArrowDown } from "./arrow-down-icon";
+import { ArrowDown } from "./icons/arrow-down-icon";
 
 export function Header() {
   return (
@@ -11,7 +11,7 @@ export function Header() {
       <button className="w-44 bg-teal-600 text-white rounded-lg px-5 py-2 text-2xl leading-tight hover:bg-teal-500 transition-colors">
         Играть
       </button>
-      <button className="ml-auto flex items-center gap-2 text-start text-teal-600 hover:text-teal-500 transition-colors">
+      <button className="ml-auto flex items-center gap-2 text-start text-teal-600">
         <Profile />
         <ArrowDown />
 
