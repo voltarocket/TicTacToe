@@ -14,7 +14,6 @@ export function Header() {
       <button className="ml-auto flex items-center gap-2 text-start text-teal-600">
         <Profile />
         <ArrowDown />
-
       </button>
     </header>
   );
