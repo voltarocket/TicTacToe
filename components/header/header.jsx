@@ -10,10 +10,10 @@ export function Header() {
       <button className="w-44 bg-teal-600 text-white rounded-lg px-5 py-2 text-2xl leading-tight hover:bg-teal-500 transition-colors">
         Играть
       </button>
-      <button className="ml-auto flex items-center gap-2 text-start">
+      <button className="ml-auto flex items-center gap-2 text-start text-teal-600 hover:text-teal-500 transition-colors">
         <Image src={avatarSrc} alt="avatar" width={48} height={48} unoptimized></Image>
         <div>
-          <div className="text-teal-600 text-lg leading-tight">Paromovevg</div>
+          <div className=" text-lg leading-tight">Paromovevg</div>
           <div className="text-slate-400 text-xs leading-tight">Рейтинг: 1230</div>
         </div>
         <svg className="text-teal-600" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
