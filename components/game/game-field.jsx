@@ -4,6 +4,9 @@ import { CrossIcon } from "./icons/cross-icon";
 import { UiButton } from "../uikit/ui-button";
 
 export function GameField({ className }) {
+
+  const cells = new Array(19 * 19).fill(null);
+
   return (
     <div
       className={clsx(
@@ -11,7 +14,7 @@ export function GameField({ className }) {
         "bg-white rounded-2xl shadow-md px-8 pt-5 pb-7"
       )}
     >
-      <div className="flex gap-3">
+      <div className="flex gap-3 items-center">
         <div className="mr-auto">
           <div className="flex items-center gap-1 text-xl leading-tight text-slate-900">
             Ход: <ZeroIcon className="w-5 h-5" />
@@ -27,6 +30,15 @@ export function GameField({ className }) {
           Сдаться
         </UiButton>
       </div>
+
+      <div className="grid grid-cols-[repeat(19,_30px)] grid-rows-[repeat(19,_30px)] pl-px pt-px mt-3">
+        {cells.map((_, i) => (
+          <button key={i} className="border border-slate-200 -ml-px -mt-px flex items-center justify-center">
+
+          </button>
+        ))}
+      </div>
+
     </div>
   );
 }
